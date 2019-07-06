@@ -17,6 +17,13 @@ function getConfig(){
             new webpack.HotModuleReplacementPlugin(),
         ]
     });
+    config.entry.index.push('webpack-hot-middleware/client');
+    if(config.entry.vendor){
+        config.entry.vendor.push('webpack-hot-middleware/client');
+    }
+    else{
+        config.entry.vendor = ['webpack-hot-middleware/client'];
+    }
     return config;
 }
 module.exports = getConfig;
