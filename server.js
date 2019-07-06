@@ -6,6 +6,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 const app = express();
 const opn = require('opn');
 const http = require('./config/http');
+const mock = require('./mock')
 
 var proxyTable = {
 	'/kjy': {
@@ -48,4 +49,5 @@ app.use(express.static('./static'));
 app.use(express.static('./dist'));
 
 //使用mock数据
-app.use('/mock', express.static('./mock'));
+// app.use('/mock', express.static('./mock'));
+mock(app);
