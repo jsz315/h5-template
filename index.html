@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>        
+        (function (doc, win) {    
+            var docEl = doc.documentElement,    
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',    
+            recalc = function () {    
+            var clientWidth = docEl.clientWidth;    
+            if (!clientWidth) return;    
+            docEl.style.fontSize = (clientWidth / 10) + 'px';    
+        };    
+        if (!doc.addEventListener) return;    
+        win.addEventListener(resizeEvt, recalc, false);    
+        doc.addEventListener('DOMContentLoaded', recalc, false);    
+        })(document, window);    
+    </script>
+</head>
+<body>
+    <p class="name">hello world</p>
+    <div class="img1 img"></div>
+    <div class="img2 img"></div>
+    <div class="img3 img"></div>
+</body>
+</html>
