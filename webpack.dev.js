@@ -7,6 +7,8 @@ function getConfig(){
     const config = merge(baseConfig, {
         // Provides process.env.NODE_ENV with value development. Enables NamedChunksPlugin and NamedModulesPlugin.
         mode: 'development',
+        // 开启调试模式
+        devtool: "cheap-module-eval-source-map",
         plugins: [
             new webpack.DefinePlugin({
                 PATH: http.dev.PATH,

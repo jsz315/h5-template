@@ -1,10 +1,6 @@
 import './index.less'
-import axios from 'axios'
+import {httpGet} from './common/request'
 
-console.log("ok123");
-
-axios.get('/api/info').then(res=>{
-    return res.data;
-}).then(res=>{
-    console.log(res);
+httpGet('/api/info').then(res=>{
+    console.log(res.data);
 })

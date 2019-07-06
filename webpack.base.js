@@ -39,13 +39,13 @@ module.exports = {
                 options: {
                     limit: 10000,
                     name: 'img/[name].[hash:7].[ext]',
+                    //图片最终请求的路径
                     publicPath: '/'
                 }
             }
         ]
     },
-    // 开启调试模式
-    devtool: "source-map",
+
     plugins: [
         new CleanWebpackPlugin({
             root: path.resolve(__dirname, 'dist'),
