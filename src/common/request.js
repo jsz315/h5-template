@@ -2,9 +2,11 @@ import axios from 'axios'
 import qs from 'qs'
 
 const NO_SERVER = window.CFG && window.CFG.baseURL;
+const DATA_FORM = 'application/x-www-form-urlencoded';
+const DATA_JSON = 'application/json';
 
 axios.defaults.headers.common['token'] = 'jsz';
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+// axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 // axios.defaults.headers.post['Content-type'] = 'application/json';
 
 if(NO_SERVER){

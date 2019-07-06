@@ -1,6 +1,6 @@
 import './index.less'
-import {httpGet} from './common/request'
+import {httpGet, httpPost} from './common/request'
 
-httpGet('/api/info').then(res=>{
-    console.log(res.data);
+httpPost('/api/info').then(res=>{
+    console.log(res);
 })
